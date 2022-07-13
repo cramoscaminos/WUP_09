@@ -7,19 +7,26 @@ output:
     number_sections: true
     toc: true
     toc_depth: 5
-
- 
-    
 ---
 
 
 ```{r include=FALSE,echo=FALSE}
 require(tigerstats)
 require(tidyverse)
+
+Fish = read.csv("Fish.csv")
+Perch = filter(Fish, Species == "Perch")
+Pike = filter(Fish, Species == "Pike")
+Roach = filter(Fish, Species == "Roach")
 ```
 
 # Predicting Fish Weight
+```{r}
 
+pwt = lm(Weight~ Length1+ Length2+ Length3+ Height, data =  Perch)
+summary(pwt)
+```
+From this graph I conclude that the best two predictors of weight for Perch are Height and length3.
 
 ## Perch
 
