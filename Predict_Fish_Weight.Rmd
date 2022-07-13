@@ -44,10 +44,9 @@ regsubsets.out
 summary.out <- summary(regsubsets.out)
 as.data.frame(summary.out$outmat)
 ```
-From this graph I conclude that the best two predictors of weight for Perch are Height and length3.
 
 ### Best Models
-The best model for this weight case is using all 4 variables.
+The best model for this weight case is using all four variables.
 
 ### Best Two regressor model
 From this graph I conclude that the best two predictors of weight for Perch are Height and length3.
@@ -77,10 +76,10 @@ as.data.frame(summary.out$outmat)
 ```
 
 ### Best Models 
-The best model for Pike is the one that uses all the varaibles: Length1:Length2:Length3 and Height
+The best model for Pike is the one that uses all the varaibles: Length1: Length2: Length3 and Height
 
 ### Best Two regressor model 
-The best regression model for Pike is Length1 and Length3.
+The two best regressor models for Pike are Length1 and Length3.
 
 ## Roach
 
@@ -107,9 +106,10 @@ as.data.frame(summary.out$outmat)
 ```
 
 ### Best Models
-The best model for Roach is the one that uses all variables:Length1: Length2:Length3 and Height.
+The best model for Roach is the one that uses all variables:Length1: Length2: Length3 and Height.
 
 ### Best Two regressor model
-The two best regression models are Length 1 and Length3. 
+The two best regressor models are Length 1 and Length3. 
 
 ## Final Summary Statements 
+For Perch, the best model for predicting weight is to use all four variables. Based on the graph I conclude that the best two predictors of weight for Perch are Height and length3. For Pike, the best model is the one that uses all the varaibles: Length1: Length2: Length3 and Height. The two best regressor models for Pike are Length1 and Length3. For Roach, the best model for Roach is the one that uses all variables:Length1: Length2: Length3 and Height. The two best regressor models are Length 1 and Length3.
