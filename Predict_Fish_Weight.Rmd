@@ -21,30 +21,97 @@ Roach = filter(Fish, Species == "Roach")
 ```
 
 # Predicting Fish Weight
+
+## Perch
 ```{r}
 
 pwt = lm(Weight~ Length1+ Length2+ Length3+ Height, data =  Perch)
 summary(pwt)
 ```
+```{r}
+library(leaps)
+regsubsets.out <-
+regsubsets(Weight ~ Length1+ Length2 + Length3 + Height,
+data = Perch,
+nbest = 2, # 1 best model for each number of predictors
+nvmax = NULL, # NULL for no limit on number of variables
+force.in = NULL, force.out = NULL,
+method = "exhaustive")
+regsubsets.out
+```
+
+```{r}
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+```
 From this graph I conclude that the best two predictors of weight for Perch are Height and length3.
 
-## Perch
-
 ### Best Models
+The best model for this case is using all 4 variables
 
 ### Best Two regressor model
-
+From this graph I conclude that the best two predictors of weight for Perch are Height and length3.
 
 ## Pike
 
+```{r}
+
+pwt = lm(Weight~ Length1+ Length2+ Length3+ Height, data =  Pike)
+summary(pwt)
+```
+```{r}
+library(leaps)
+regsubsets.out <-
+regsubsets(Weight ~ Length1+ Length2 + Length3 + Height,
+data = Pike,
+nbest = 2, # 1 best model for each number of predictors
+nvmax = NULL, # NULL for no limit on number of variables
+force.in = NULL, force.out = NULL,
+method = "exhaustive")
+regsubsets.out
+```
+```{r}
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+```
+
 ### Best Models
 
 ### Best Two regressor model
+
+
+
+
+
 
 ## Roach
 
+```{r}
+
+pwt = lm(Weight~ Length1+ Length2+ Length3+ Height, data =  Roach)
+summary(pwt)
+```
+```{r}
+library(leaps)
+regsubsets.out <-
+regsubsets(Weight ~ Length1+ Length2 + Length3 + Height,
+data = Roach,
+nbest = 2, # 1 best model for each number of predictors
+nvmax = NULL, # NULL for no limit on number of variables
+force.in = NULL, force.out = NULL,
+method = "exhaustive")
+regsubsets.out
+```
+```{r}
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+```
+
 ### Best Models
 
 ### Best Two regressor model
+
+
+
 
 ## Final Summary Statements
